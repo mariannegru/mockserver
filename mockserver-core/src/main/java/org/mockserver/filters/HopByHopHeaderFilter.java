@@ -24,7 +24,8 @@ public class HopByHopHeaderFilter {
                 "trailer",
                 "proxy-authorization",
                 "proxy-authenticate",
-                "upgrade"
+                "upgrade",
+                "host"
             );
             Headers headers = new Headers();
             for (Header header : request.getHeaderList()) {
