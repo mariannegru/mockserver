@@ -25,7 +25,7 @@ public class HttpForwardActionHandler extends HttpForwardAction {
         httpRequest.removeHeader("Host");
         httpRequest.withHeader("Host", httpForward.getHost());
         httpRequest.removeHeader("Authority");
-        httpRequest.withHeader("Authority", httpForward.getHost());
+        // httpRequest.withHeader("Authority", httpForward.getHost());
         return sendRequest(httpRequest, new InetSocketAddress(httpForward.getHost(), httpForward.getPort()), null);
     }
 
